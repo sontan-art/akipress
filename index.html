@@ -12,7 +12,7 @@
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="https://github.com/ваш_пользователь/ваш_репозиторий/raw/main/images/logo.png" alt="AkiPress" class="logo-image"/>
+      <img src="logo.png" alt="AkiPress" />
     </div>
     <nav class="nav">
       <a href="#">Главная</a>
@@ -23,25 +23,42 @@
       <a href="#">Регионы</a>
     </nav>
     <div class="search">
-      <input type="text" placeholder="Поиск..." id="searchInput"/>
+      <input type="text" placeholder="Поиск..." id="searchInput" />
     </div>
   </header>
 
   <!-- Main News Section -->
   <main class="main-content">
-    <section class="top-news">
-      <!-- Главная новость -->
-      <div class="main-news">
-        <img src="https://github.com/ваш_пользователь/ваш_репозиторий/raw/main/images/main-news.jpg" alt="Главная новость" class="main-news-image"/>
-        <h2>Главная новость</h2>
-        <p>Текст главной новости, краткое описание...</p>
-        <a href="https://kg.akipress.org/news/main" class="read-more">Читать полностью</a>
-      </div>
+    <section class="main-news">
+      <!-- Main news image and text -->
+      <img src="main.jpg" alt="Главная новость" class="main-news-image">
+      <h2>Главная новость</h2>
+      <p>Текст главной новости, краткое описание...</p>
+      <a href="#">Читать полностью</a>
     </section>
 
-    <!-- Новости -->
-    <section class="news-list" id="newsList">
-      <!-- Новости будут загружаться через JavaScript -->
+    <section class="news-list">
+      <!-- News items -->
+      <article class="news-item">
+        <img src="news1.jpg" alt="Новость 1" class="news-image">
+        <h3>Новости 1</h3>
+        <p>Краткое описание новости 1...</p>
+        <a href="#">Читать полностью</a>
+      </article>
+
+      <article class="news-item">
+        <img src="news2.jpg" alt="Новость 2" class="news-image">
+        <h3>Новости 2</h3>
+        <p>Краткое описание новости 2...</p>
+        <a href="#">Читать полностью</a>
+      </article>
+
+      <article class="news-item">
+        <img src="news3.jpg" alt="Новость 3" class="news-image">
+        <h3>Новости 3</h3>
+        <p>Краткое описание новости 3...</p>
+        <a href="#">Читать полностью</a>
+      </article>
     </section>
   </main>
 
