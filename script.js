@@ -1,37 +1,47 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const newsList = document.getElementById('newsList');
-  
-  // Mock News Data (можно заменить на реальный API)
-  const newsData = [
-    { title: 'Новости 1', text: 'Описание новости 1', image: 'https://via.placeholder.com/300' },
-    { title: 'Новости 2', text: 'Описание новости 2', image: 'https://via.placeholder.com/300' },
-    { title: 'Новости 3', text: 'Описание новости 3', image: 'https://via.placeholder.com/300' },
-  ];
+// Mock data for news articles
+const newsData = [
+    {
+        title: "Новости 1",
+        description: "Описание новости 1. Краткое описание события или информации.",
+        image: "https://via.placeholder.com/400x250"
+    },
+    {
+        title: "Новости 2",
+        description: "Описание новости 2. Краткое описание события или информации.",
+        image: "https://via.placeholder.com/400x250"
+    },
+    {
+        title: "Новости 3",
+        description: "Описание новости 3. Краткое описание события или информации.",
+        image: "https://via.placeholder.com/400x250"
+    },
+    {
+        title: "Новости 4",
+        description: "Описание новости 4. Краткое описание события или информации.",
+        image: "https://via.placeholder.com/400x250"
+    },
+    {
+        title: "Новости 5",
+        description: "Описание новости 5. Краткое описание события или информации.",
+        image: "https://via.placeholder.com/400x250"
+    },
+    {
+        title: "Новости 6",
+        description: "Описание новости 6. Краткое описание события или информации.",
+        image: "https://via.placeholder.com/400x250"
+    }
+];
 
-  // Отображение новостей
-  function renderNews(news) {
-    newsList.innerHTML = '';
-    news.forEach(item => {
-      const newsCard = document.createElement('div');
-      newsCard.classList.add('news-card');
-      newsCard.innerHTML = `
-        <img src="${item.image}" alt="${item.title}">
-        <h3>${item.title}</h3>
-        <p>${item.text}</p>
-      `;
-      newsList.appendChild(newsCard);
-    });
-  }
+// Function to display news items dynamically
+const newsList = document.getElementById('newsList');
 
-  renderNews(newsData);
-
-  // Поиск новостей
-  const searchInput = document.getElementById('searchInput');
-  searchInput.addEventListener('input', function () {
-    const query = searchInput.value.toLowerCase();
-    const filteredNews = newsData.filter(news => 
-      news.title.toLowerCase().includes(query) || news.text.toLowerCase().includes(query)
-    );
-    renderNews(filteredNews);
-  });
+newsData.forEach(news => {
+    const newsItem = document.createElement('div');
+    newsItem.classList.add('news-item');
+    newsItem.innerHTML = `
+        <img src="${news.image}" alt="${news.title}">
+        <h3>${news.title}</h3>
+        <p>${news.description}</p>
+    `;
+    newsList.appendChild(newsItem);
 });
