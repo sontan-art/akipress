@@ -1,84 +1,100 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.header {
-  background-color: #0077b6;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.header .logo img {
-  width: 120px;
+header .logo img {
+    width: 150px;
 }
 
-.header .nav {
-  display: flex;
-  gap: 20px;
+header .nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-.header .nav a {
-  color: white;
-  text-decoration: none;
+header .nav a:hover {
+    text-decoration: underline;
 }
 
-.search input {
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 5px;
+header .search input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
 }
 
+/* Main News Section */
 .main-content {
-  padding: 20px;
+    padding: 20px;
 }
 
 .news-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.news-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.news-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-.news-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+.news-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.news-card h3 {
-  margin-top: 10px;
-  font-size: 18px;
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
-.news-card p {
-  font-size: 14px;
-  color: #555;
+.news-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
 }
 
-.footer {
-  background-color: #0077b6;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+.news-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-item {
+        width: 100%;
+    }
 }
