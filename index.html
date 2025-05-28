@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://via.placeholder.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://sontan-art.github.io;">
   <title>Новости Кыргызстана | AkiPress</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -12,7 +12,7 @@
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <img src="logo.png" alt="AkiPress">
+      <img src="https://github.com/ваш_пользователь/ваш_репозиторий/raw/main/images/logo.png" alt="AkiPress" class="logo-image"/>
     </div>
     <nav class="nav">
       <a href="#">Главная</a>
@@ -23,26 +23,26 @@
       <a href="#">Регионы</a>
     </nav>
     <div class="search">
-      <input type="text" placeholder="Поиск...">
+      <input type="text" placeholder="Поиск..." id="searchInput"/>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Главная новость -->
-    <div class="top-news">
+  <!-- Main News Section -->
+  <main class="main-content">
+    <section class="top-news">
+      <!-- Главная новость -->
       <div class="main-news">
-        <img src="https://via.placeholder.com/600x350" alt="Главная новость" class="main-news-image">
+        <img src="https://github.com/ваш_пользователь/ваш_репозиторий/raw/main/images/main-news.jpg" alt="Главная новость" class="main-news-image"/>
         <h2>Главная новость</h2>
         <p>Текст главной новости, краткое описание...</p>
         <a href="https://kg.akipress.org/news/main" class="read-more">Читать полностью</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Список новостей -->
-    <div class="news-list" id="newsList">
-      <!-- Новости будут подгружаться сюда с помощью JavaScript -->
-    </div>
+    <!-- Новости -->
+    <section class="news-list" id="newsList">
+      <!-- Новости будут загружаться через JavaScript -->
+    </section>
   </main>
 
   <!-- Footer -->
