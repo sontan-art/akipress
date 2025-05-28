@@ -85,7 +85,7 @@ h2, h3 {
   overflow: hidden;
 }
 
-.news-image {
+.news-item img {
   width: 100%;
   height: auto;
 }
@@ -120,20 +120,4 @@ footer {
   padding: 20px;
   background-color: #222;
   color: white;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .news-item {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .main-news h2 {
-    font-size: 2rem;
-  }
-
-  .news-list {
-    flex-direction: column;
-  }
 }
