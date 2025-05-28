@@ -67,6 +67,12 @@ main {
   color: #333;
 }
 
+.main-news-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 .news-list {
   width: 35%;
 }
@@ -86,6 +92,13 @@ main {
 
 .news-item p {
   color: #555;
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Подвал */
