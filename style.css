@@ -38,10 +38,10 @@ h2, h3 {
 /* Главная новость */
 .main-news {
   position: relative;
-  height: 100vh; /* Задаем высоту секции на 100% высоты экрана */
-  background-image: url('main.jpg'); /* Указываем путь к картинке */
-  background-size: cover; /* Изображение покрывает весь экран */
-  background-position: center center; /* Центрируем изображение */
+  height: 100vh;
+  background-image: url('main.jpg');
+  background-size: cover;
+  background-position: center center;
   color: white;
   text-align: center;
   display: flex;
@@ -83,34 +83,47 @@ h2, h3 {
   margin: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.news-item img {
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
-.news-item h3 {
+.news-title {
+  font-size: 1.5rem;
   padding: 10px;
   background-color: #f4f4f4;
   margin: 0;
 }
 
-.news-item p {
+.news-description {
   padding: 10px;
   font-size: 1rem;
+  color: #666;
 }
 
-.news-item a {
+.read-more {
   display: block;
   padding: 10px;
   background-color: #222;
   color: white;
   text-decoration: none;
   text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.news-item a:hover {
+.read-more:hover {
   background-color: #444;
 }
 
@@ -120,4 +133,20 @@ footer {
   padding: 20px;
   background-color: #222;
   color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .news-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .main-news h2 {
+    font-size: 2rem;
+  }
+
+  .news-list {
+    flex-direction: column;
+  }
 }
