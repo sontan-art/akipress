@@ -1,4 +1,4 @@
-// Mock data for news articles
+// Данные новостей для динамической загрузки
 const newsData = [
     {
         title: "Новости 1",
@@ -32,7 +32,7 @@ const newsData = [
     }
 ];
 
-// Function to display news items dynamically
+// Функция для отображения новостей на сайте
 const newsList = document.getElementById('newsList');
 
 newsData.forEach(news => {
