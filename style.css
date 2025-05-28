@@ -1,4 +1,4 @@
-/* Общие стили */
+* Общие стили */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  color: #333;
 }
 
 /* Шапка */
@@ -73,6 +74,12 @@ main {
   margin-bottom: 15px;
 }
 
+.read-more {
+  text-decoration: none;
+  color: #0077b3;
+  font-weight: bold;
+}
+
 .news-list {
   width: 35%;
 }
@@ -99,7 +106,6 @@ main {
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
-}
 
 /* Подвал */
 .footer {
