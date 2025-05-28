@@ -28,15 +28,31 @@ function renderNews() {
     const newsItem = document.createElement('div');
     newsItem.classList.add('news-item');
 
-    newsItem.innerHTML = `
-      <img src="${news.image}" alt="${news.title}" class="news-image"/>
-      <h3 class="news-title">${news.title}</h3>
-      <p class="news-description">${news.description}</p>
-      <a href="${news.link}" class="read-more">Читать полностью</a>
-    `;
+    const image = document.createElement('img');
+    image.src = news.image;
+    image.alt = news.title;
+    image.classList.add('news-image');
+    image.loading = "lazy";  // Ленивая загрузка
+
+    const title = document.createElement('h3');
+    title.classList.add('news-title');
+    title.textContent = news.title;
+
+    const description = document.createElement('p');
+    description.classList.add('news-description');
+    description.textContent = news.description;
+
+    const link = document.createElement('a');
+    link.href = news.link;
+    link.classList.add('read-more');
+    link.textContent = 'Читать полностью';
+
+    newsItem.appendChild(image);
+    newsItem.appendChild(title);
+    newsItem.appendChild(description);
+    newsItem.appendChild(link);
 
     newsList.appendChild(newsItem);
-  });
 }
 
 // Загрузить новости при старте
