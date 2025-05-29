@@ -20,6 +20,13 @@
       "image": "images/news3.jpg",
       "link": "#",
       "category": "Экономика"
+    },
+    {
+      "title": "Чемпионат по футболу стартовал",
+      "description": "В стране начался новый сезон чемпионата по футболу...",
+      "image": "images/news4.jpg",
+      "link": "#",
+      "category": "Спорт"
     }
   ]
 }
