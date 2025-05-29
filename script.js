@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     latestNews.innerHTML = '';
 
     newsList.forEach((item, index) => {
-      // Вывод последних новостей
+      // Вывод последних новостей в список (до 5)
       if (index < 5) {
         const li = document.createElement('li');
         li.className = 'list-group-item';
@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         latestNews.appendChild(li);
       }
 
-      // Карточка новости
+      // Создаём карточку новости
       const col = document.createElement('div');
       col.className = 'col-md-4';
       col.innerHTML = `
         <div class="card mb-4 shadow-sm">
-          <img src="${item.image}" class="card-img-top" alt="Новость">
+          <img src="${item.image}" class="card-img-top" alt="Новость" />
           <div class="card-body">
             <h5 class="card-title">${item.title}</h5>
             <p class="card-text">${item.description}</p>
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Ошибка загрузки новостей:', err);
     });
 
-  // Фильтрация новостей по категориям
   const filter = document.getElementById('categoryFilter');
   filter.addEventListener('change', () => {
     const selected = filter.value;
