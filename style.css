@@ -1,25 +1,12 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar-brand img {
-  height: 40px;
+h1, h2 {
+  font-weight: 600;
 }
 
-.card {
-  margin-bottom: 20px;
-}
-
-.card-title {
-  color: #005983;
-  font-weight: bold;
-}
-
-footer {
-  background-color: #005983;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
 }
