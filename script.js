@@ -1,35 +1,34 @@
-const newsData = [
-  {
-    title: "Проблемы экологии в Центральной Азии",
-    description: "Проблемы экологии в Центральной Азии становятся все более актуальными. Как они влияют на развитие региона и что делают власти...",
-    image: "news1.jpg",
-    link: "https://kg.akipress.org/news1"
-  },
-  {
-    title: "Политическая ситуация в Кыргызстане",
-    description: "Политическая ситуация в Кыргызстане: анализ текущих событий и прогнозы на ближайшие годы. Важные политические инициативы и их последствия...",
-    image: "news2.jpg",
-    link: "https://kg.akipress.org/news2"
-  },
-  {
-    title: "Социальные реформы и их влияние",
-    description: "Социальные реформы, внедряемые в Кыргызстане, меняют жизнь людей. Какие изменения ждут страну в сфере здравоохранения и образования...",
-    image: "news3.jpg",
-    link: "https://kg.akipress.org/news3"
-  }
-];
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('news.json')
+    .then(response => response.json())
+    .then(data => {
+      const newsContainer = document.getElementById('news-container');
+      const latestNews = document.getElementById('latest-news');
 
-// Функция для отображения новостей
-function renderNews() {
-  const newsList = document.querySelector('.news-list');
-  newsList.innerHTML = '';  // Очистить существующие новости
+      data.news.forEach((item, index) => {
+        // Добавление в список последних новостей
+        if (index < 5) {
+          const li = document.createElement('li');
+          li.className = 'list-group-item';
+          li.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
+          latestNews.appendChild(li);
+        }
 
-  newsData.forEach(news => {
-    const newsItem = document.createElement('div');
-    newsItem.classList.add('news-item');
-
-    newsItem.innerHTML = `
-      <img src="${news.image}" alt="${news.title}" class="news-image"/>
-      <h3><a href="${news.link}" target="_blank">${news.title}</a></h3>
-      <p>${news.description}</p>
-      <a href="${news.link}" target="_blank">Читать
+        // Добавление карточки новости
+        const col = document.createElement('div');
+        col.className = 'col-md-4';
+        col.innerHTML = `
+          <div class="card">
+            <img src="${item.image}" class="card-img-top" alt="Новость">
+            <div class="card-body">
+              <h5 class="card-title">${item.title}</h5>
+              <p class="card-text">${item.description}</p>
+              <a href="${item.link}" class="btn btn-outline-primary btn-sm" target="_blank">Читать далее</a>
+            </div>
+          </div>
+        `;
+        newsContainer.appendChild(col);
+      });
+    })
+    .catch(error => console.error('Ошибка загрузки новостей:', error));
+});
