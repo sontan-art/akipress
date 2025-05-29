@@ -1,123 +1,25 @@
-/* Общие стили */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
 }
 
-header, footer {
-  background-color: #222;
-  color: white;
-  padding: 10px;
+.navbar-brand img {
+  height: 40px;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-header .logo img {
-  width: 150px;
-}
-
-.search input {
-  padding: 5px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  margin-left: 20px;
-}
-
-h2, h3 {
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-/* Главная новость */
-.main-news {
-  position: relative;
-  height: 100vh;
-  background-image: url('main.jpg');
-  background-size: cover;
-  background-position: center center;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 20px;
-}
-
-.main-news h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.main-news p {
-  font-size: 1.5rem;
+.card {
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.main-news a {
-  color: #fff;
-  font-size: 1.2rem;
-  text-decoration: underline;
+.card-title {
+  color: #005983;
+  font-weight: bold;
 }
 
-/* Стили для списка новостей */
-.news-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.news-item {
-  background-color: #fff;
-  border-radius: 10px;
-  width: 30%;
-  margin: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.news-item img {
-  width: 100%;
-  height: auto;
-}
-
-.news-item h3 {
-  padding: 10px;
-  background-color: #f4f4f4;
-  margin: 0;
-}
-
-.news-item p {
-  padding: 10px;
-  font-size: 1rem;
-}
-
-.news-item a {
-  display: block;
-  padding: 10px;
-  background-color: #222;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-
-.news-item a:hover {
-  background-color: #444;
-}
-
-/* Стили для футера */
 footer {
+  background-color: #005983;
+  color: white;
   text-align: center;
   padding: 20px;
-  background-color: #222;
-  color: white;
+  margin-top: 40px;
 }
