@@ -1,0 +1,27 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+}
