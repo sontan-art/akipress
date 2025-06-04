@@ -1,74 +1,69 @@
-!DOCTYPE html
-html lang=ru
-head
-  meta charset=UTF-8 
-  meta name=viewport content=width=device-width, initial-scale=1 
-  titleAKIpress — Новости Кыргызстанаtitle
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKIpress — Новости Кыргызстана</title>
 
-  !-- Bootstrap CSS --
-  link
-    href=httpscdn.jsdelivr.netnpmbootstrap@5.3.0distcssbootstrap.min.css
-    rel=stylesheet
-  
-  link rel=stylesheet href=style.css 
-head
-body
-  nav class=navbar navbar-expand-lg navbar-dark bg-primary sticky-top
-    div class=container
-      a class=navbar-brand href=#AKIpressa
-      button
-        class=navbar-toggler
-        type=button
-        data-bs-toggle=collapse
-        data-bs-target=#navbarNav
-        aria-controls=navbarNav
-        aria-expanded=false
-        aria-label=Переключить навигацию
-      
-        span class=navbar-toggler-iconspan
-      button
-      div class=collapse navbar-collapse id=navbarNav
-        ul class=navbar-nav ms-auto
-          li class=nav-itema class=nav-link active href=# data-category=allГлавнаяali
-          li class=nav-itema class=nav-link href=# data-category=ПолитикаПолитикаali
-          li class=nav-itema class=nav-link href=# data-category=ОбществоОбществоali
-          li class=nav-itema class=nav-link href=# data-category=ЭкономикаЭкономикаali
-          li class=nav-itema class=nav-link href=# data-category=СпортСпортali
-        ul
-      div
-    div
-  nav
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">AKIpress</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  header class=container my-4
-    h1Новости Кыргызстанаh1
-    div class=input-group mb-3
-      input
-        id=searchInput
-        type=text
-        class=form-control
-        placeholder=Поиск по заголовкам...
-        aria-label=Поиск по заголовкам
-      
-      button id=clearSearch class=btn btn-outline-secondary type=buttonОчиститьbutton
-    div
-  header
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#" data-category="all">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-category="Политика">Политика</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-category="Общество">Общество</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-category="Экономика">Экономика</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-category="Спорт">Спорт</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  main class=container
-    div id=news-container class=rowdiv
+  <header class="container my-4">
+    <h1>Новости Кыргызстана</h1>
+    <div class="input-group mb-3">
+      <input
+        id="searchInput"
+        type="text"
+        class="form-control"
+        placeholder="Поиск по заголовкам..."
+        aria-label="Поиск по заголовкам"
+      />
+      <button id="clearSearch" class="btn btn-outline-secondary" type="button">Очистить</button>
+    </div>
+  </header>
 
-    nav
-      ul id=pagination class=pagination justify-content-center mt-4ul
-    nav
-  main
+  <main class="container">
+    <div id="news-container" class="row"></div>
+    <nav>
+      <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+    </nav>
+  </main>
 
-  footer class=bg-light py-4 mt-5
-    div class=container text-center text-muted
-      &copy; 2025 AKIpress. Все права защищены.
-    div
-  footer
+  <footer class="bg-light py-4 mt-5">
+    <div class="container text-center text-muted">© 2025 AKIpress. Все права защищены.</div>
+  </footer>
 
-  !-- Bootstrap JS Bundle --
-  script src=httpscdn.jsdelivr.netnpmbootstrap@5.3.0distjsbootstrap.bundle.min.jsscript
-  script src=script.jsscript
-body
-html
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
