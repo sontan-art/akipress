@@ -1,5 +1,8 @@
 body {
+  background-color: #f0f2f5; /* фон как на kg.akipress.org */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
