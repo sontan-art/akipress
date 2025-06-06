@@ -3,7 +3,7 @@
     {
       "title": "Политика Кыргызстана сегодня",
       "description": "Краткое описание новости по политике.",
-      "image": "https://via.placeholder.com/400x250?text=Политика",
+      "image": "images/politics.jpg",
       "date": "2025-06-04T15:00:00",
       "category": "Политика",
       "link": "https://kg.akipress.org/politics-news"
@@ -11,7 +11,7 @@
     {
       "title": "Общественные мероприятия на выходных",
       "description": "Информация о предстоящих событиях.",
-      "image": "https://via.placeholder.com/400x250?text=Общество",
+      "image": "images/society.jpg",
       "date": "2025-06-03T12:00:00",
       "category": "Общество",
       "link": "https://kg.akipress.org/society-events"
@@ -19,7 +19,7 @@
     {
       "title": "Экономика Кыргызстана растёт",
       "description": "Экономический обзор за последний квартал.",
-      "image": "https://via.placeholder.com/400x250?text=Экономика",
+      "image": "images/economy.jpg",
       "date": "2025-06-02T10:30:00",
       "category": "Экономика",
       "link": "https://kg.akipress.org/economy-news"
@@ -27,7 +27,7 @@
     {
       "title": "Спортивные результаты недели",
       "description": "Главные спортивные события и результаты.",
-      "image": "https://via.placeholder.com/400x250?text=Спорт",
+      "image": "images/sports.jpg",
       "date": "2025-06-01T18:45:00",
       "category": "Спорт",
       "link": "https://kg.akipress.org/sports-results"
